@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--=== Required meta tags ===-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://mahfujurahman.github.io/portfolio/assets/images/logo.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://mahfujurahman.github.io/portfolio/assets/images/logo.png" />
+
+    <!--=== custom css ===-->
+    <link rel="shortcut icon" type="image/ico" href="assets/images/logo.png" />
+
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--=== custom css ===-->
+
+    <!-- 2. Configure Tailwind v4 for manual dark mode -->
+    <style type="text/tailwindcss">
+        /* Tells v4 to activate dark: classes whenever a parent (like <html>) has the .dark class */
+    @variant dark (.dark &);
+
+    /* Custom Scrollbar Styles */
+    @layer base {
+        /* Modern standard for Firefox */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: var(--color-zinc-300) var(--color-zinc-50);
+            scroll-behavior: smooth;
+        }
+
+        html.dark {
+            scrollbar-color: var(--color-zinc-700) var(--color-zinc-950);
+        }
+
+        /* Webkit Engines (Chrome, Safari, Edge, Brave) */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        /* Track background matches the section backgrounds */
+        ::-webkit-scrollbar-track {
+            background: #fafafa; /* zinc-50 */
+        }
+
+        html.dark ::-webkit-scrollbar-track {
+            background: #09090b; /* zinc-950 */
+        }
+
+        /* Scrollbar Thumb */
+        ::-webkit-scrollbar-thumb {
+            background: #d4d4d8; /* zinc-300 */
+            border-radius: 100px;
+            border: 2px solid #fafafa; /* Gives a nice padding effect */
+        }
+
+        html.dark ::-webkit-scrollbar-thumb {
+            background: #3f3f46; /* zinc-700 */
+            border: 2px solid #09090b;
+        }
+
+        /* Hover States */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a1a1aa; /* zinc-400 */
+        }
+
+        html.dark ::-webkit-scrollbar-thumb:hover {
+            background: #52525b; /* zinc-600 */
+        }
+    }
+    </style>
+
+    <!-- Theme Toggle JavaScript Logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggleBtn = document.getElementById("themeToggleBtn");
+            const sunIcon = document.getElementById("sunIcon");
+            const moonIcon = document.getElementById("moonIcon");
+            const htmlElement = document.documentElement;
+
+            // Check system or local storage preferences
+            const cachedTheme = localStorage.getItem("theme");
+            const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            if (cachedTheme === "dark" || (!cachedTheme && systemPrefersDark)) {
+                enableDarkMode();
+            } else {
+                enableLightMode();
+            }
+
+            themeToggleBtn?.addEventListener("click", () => {
+                if (htmlElement.classList.contains("dark")) {
+                    enableLightMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+
+            function enableLightMode() {
+                htmlElement.classList.remove("dark");
+                sunIcon?.classList.add("hidden");
+                moonIcon?.classList.remove("hidden");
+                localStorage.setItem("theme", "light");
+            }
+
+            function enableDarkMode() {
+                htmlElement.classList.add("dark");
+                sunIcon?.classList.remove("hidden");
+                moonIcon?.classList.add("hidden");
+                localStorage.setItem("theme", "dark");
+            }
+        });
+    </script>
+</head>
+
+<body
+    class="bg-zinc-100 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 antialiased selection:bg-zinc-200 selection:text-zinc-900 dark:selection:bg-zinc-800 dark:selection:text-white min-h-screen transition-colors duration-300">
+    <div class="cv_main_wrapper relative min-h-screen">
+
+        <!-- Loader Start -->
+        <div
+            class="loader fixed inset-0 z-50 bg-zinc-100 dark:bg-zinc-950 transition-opacity duration-500 overflow-hidden">
+            <!-- Pulse Container (Precisely mirrors your actual layout) -->
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-24 space-y-12 animate-pulse">
+
+                <!-- Mock Header Navigation -->
+                <div class="flex justify-between items-center border-b border-zinc-200 dark:border-zinc-900 pb-6">
+                    <div class="h-8 w-32 bg-zinc-300 dark:bg-zinc-800 rounded-md"></div>
+                    <div class="hidden md:flex gap-6">
+                        <div class="h-4 w-16 bg-zinc-200 dark:bg-zinc-800/60 rounded-md"></div>
+                        <div class="h-4 w-16 bg-zinc-200 dark:bg-zinc-800/60 rounded-md"></div>
+                        <div class="h-4 w-16 bg-zinc-200 dark:bg-zinc-800/60 rounded-md"></div>
+                    </div>
+                </div>
+
+                <!-- Mock Home Grid Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-start pt-4">
+
+                    <!-- Profile Frame Column Skeleton (5 Cols) -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-start">
+                        <div
+                            class="w-full max-w-sm p-2 border border-zinc-200 bg-white/50 dark:border-zinc-900 dark:bg-zinc-900/30 rounded-lg">
+                            <!-- Matches the exact aspect-[4/5] profile image container -->
+                            <div class="aspect-[4/5] w-full bg-zinc-300 dark:bg-zinc-800 rounded"></div>
+                        </div>
+                    </div>
+
+                    <!-- Content Column Skeleton (7 Cols) -->
+                    <div class="lg:col-span-7 space-y-10">
+                        <div class="space-y-4">
+
+                            <!-- Available Indicator Badge Skeleton -->
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-zinc-300 dark:bg-zinc-800"></div>
+                                <div class="h-3 w-48 bg-zinc-200 dark:bg-zinc-800/60 rounded"></div>
+                            </div>
+
+                            <!-- Introductions Skeleton -->
+                            <div class="space-y-3 pt-2">
+                                <div class="h-4 w-32 bg-zinc-300 dark:bg-zinc-800 rounded"></div>
+                                <div class="h-10 w-44 bg-zinc-400/50 dark:bg-zinc-700/50 rounded-md"></div>
+                                <div class="h-12 w-3/4 bg-zinc-300 dark:bg-zinc-800 rounded-md"></div>
+                            </div>
+
+                            <!-- Action Link Plate & Social Grid Skeleton -->
+                            <div class="flex flex-wrap items-center gap-8 pt-4">
+                                <!-- Primary CTA Button -->
+                                <div class="h-11 w-32 bg-zinc-400/60 dark:bg-zinc-700 rounded"></div>
+
+                                <!-- Social Icon Matrix -->
+                                <div class="flex items-center gap-2">
+                                    <div
+                                        class="w-10 h-10 rounded border border-zinc-200 bg-white/50 dark:border-zinc-900 dark:bg-zinc-900/20">
+                                    </div>
+                                    <div
+                                        class="w-10 h-10 rounded border border-zinc-200 bg-white/50 dark:border-zinc-900 dark:bg-zinc-900/20">
+                                    </div>
+                                    <div
+                                        class="w-10 h-10 rounded border border-zinc-200 bg-white/50 dark:border-zinc-900 dark:bg-zinc-900/20">
+                                    </div>
+                                    <div
+                                        class="w-10 h-10 rounded border border-zinc-200 bg-white/50 dark:border-zinc-900 dark:bg-zinc-900/20">
+                                    </div>
+                                    <div
+                                        class="w-10 h-10 rounded border border-zinc-200 bg-white/50 dark:border-zinc-900 dark:bg-zinc-900/20">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Narrative Description Skeleton -->
+                        <div class="space-y-6 border-t border-zinc-200 pt-8 dark:border-zinc-900">
+                            <!-- Framework Subtitle Tagline -->
+                            <div class="h-5 w-2/3 bg-zinc-300 dark:bg-zinc-800 rounded"></div>
+
+                            <!-- Paragraph Block 1 -->
+                            <div class="space-y-2.5">
+                                <div class="h-4 w-full bg-zinc-200 dark:bg-zinc-800/60 rounded"></div>
+                                <div class="h-4 w-full bg-zinc-200 dark:bg-zinc-800/60 rounded"></div>
+                                <div class="h-4 w-4/5 bg-zinc-200 dark:bg-zinc-800/60 rounded"></div>
+                            </div>
+
+                            <!-- Paragraph Block 2 -->
+                            <div class="space-y-2.5">
+                                <div class="h-4 w-full bg-zinc-200 dark:bg-zinc-800/60 rounded"></div>
+                                <div class="h-4 w-1/2 bg-zinc-200 dark:bg-zinc-800/60 rounded"></div>
+                            </div>
+
+                            <!-- Footer Link Arrow -->
+                            <div class="pt-2">
+                                <div class="h-4 w-56 bg-zinc-300 dark:bg-zinc-800 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Loader End -->
+
+        <!-- Bottom To Top Start -->
+        <div class="cv_top_icon fixed bottom-6 right-6 z-40">
+            <a id="button" href="javascript:void(0);"
+                class="flex w-11 h-11 items-center justify-center rounded-full border border-zinc-200 bg-white/90 text-zinc-600 shadow-sm backdrop-blur-md transition-all duration-300 hover:border-zinc-300 hover:text-zinc-900 hover:-translate-y-1 cursor-pointer dark:border-zinc-800 dark:bg-zinc-900/90 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-100 dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+                title="Scroll to top">
+                <img src="assets/images/gototop.svg"
+                    class="w-4 h-4 opacity-60 hover:opacity-100 transition-opacity dark:invert" alt="Up arrow"
+                    loading="lazy" />
+            </a>
+        </div>
+        <!-- Bottom To Top End -->
+
+        <!-- Dynamic Alert Container Slot for Form Notifications -->
+        <div id="toastContainer" class="fixed top-6 right-6 z-50 flex flex-col gap-2 max-w-sm pointer-events-none">
+        </div>
+
+        <!-- Header Navigation System Start -->
+        <header
+            class="body-header bix-static cv_header_wrapper sticky top-0 z-30 w-full border-b border-zinc-200 bg-white/85 shadow-xs backdrop-blur-md transition-colors duration-300 dark:border-zinc-900 dark:bg-zinc-950/80 dark:shadow-none">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+
+                    <!-- Logo Section -->
+                    <div class="cv_logo flex-shrink-0">
+                        <a href="#home" class="block">
+                            <img src="assets/images/logo/logo.png"
+                                class="logo-img object-contain h-[32px] transition-all duration-300" alt="Logo"
+                                loading="lazy" />
+                        </a>
+                    </div>
+
+                    <!-- Desktop & Theme Engine Controller Layout Area -->
+                    <div class="flex items-center gap-6">
+                        <!-- Desktop Navigation Menu Links -->
+                        <div class="hidden lg:flex lg:items-center lg:gap-8" id="navbarSupportedContent">
+                            <ul class="navbar-nav bix-menu cv_menus flex items-center gap-8 font-mono text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400"
+                                id="top-menu">
+                                <li>
+                                    <a class="nav-link active text-zinc-950 relative after:absolute after:bottom-[-22px] after:left-0 after:w-full after:h-[1px] after:bg-zinc-950 transition-colors dark:text-zinc-100 dark:after:bg-zinc-100"
+                                        href="#home">Home</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-zinc-600 hover:text-zinc-950 transition-colors dark:text-zinc-400 dark:hover:text-zinc-100"
+                                        href="#about">About</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-zinc-600 hover:text-zinc-950 transition-colors dark:text-zinc-400 dark:hover:text-zinc-100"
+                                        href="#exprience">Experience</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-zinc-600 hover:text-zinc-950 transition-colors dark:text-zinc-400 dark:hover:text-zinc-100"
+                                        href="#portfolio">My Work</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-zinc-600 hover:text-zinc-950 transition-colors dark:text-zinc-400 dark:hover:text-zinc-100"
+                                        href="#strength">Strength</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-zinc-600 hover:text-zinc-950 transition-colors dark:text-zinc-400 dark:hover:text-zinc-100"
+                                        href="#education">Education</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-zinc-600 hover:text-zinc-950 transition-colors dark:text-zinc-400 dark:hover:text-zinc-100"
+                                        href="#contactMe">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Theme Toggle Action Controller -->
+                        <button id="themeToggleBtn" aria-label="Toggle Interface Theme Mode"
+                            class="theme-btn-style inline-flex h-9 w-9 items-center justify-center rounded border border-zinc-200 bg-white text-zinc-900 hover:border-zinc-300 hover:bg-zinc-100 transition-all duration-300 cursor-pointer focus:outline-none dark:border-zinc-900 dark:bg-zinc-950 dark:text-zinc-400 dark:hover:border-zinc-800 dark:hover:bg-zinc-900/50 dark:hover:text-white">
+                            <!-- Sun Icon (Visible in Light Mode) -->
+                            <svg id="sunIcon" class="hidden w-4 h-4 text-amber-500" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <path
+                                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                                </path>
+                            </svg>
+                            <!-- Moon Icon (Visible in Dark Mode) -->
+                            <svg id="moonIcon" class="w-4 h-4 text-zinc-700 dark:text-zinc-400" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Mobile Hamburger Toggle Menu Trigger -->
+                        <div class="flex lg:hidden">
+                            <button
+                                class="cv_toggle_btn text-zinc-600 hover:text-zinc-900 transition-colors focus:outline-none dark:text-zinc-400 dark:hover:text-zinc-100"
+                                aria-label="Toggle Menu">
+                                <svg class="ham hamRotate ham7 w-10 h-10 stroke-current stroke-[2.5] fill-none"
+                                    viewBox="0 0 100 100">
+                                    <path class="line top transition-all duration-300"
+                                        d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013">
+                                    </path>
+                                    <path class="line middle transition-all duration-300" d="m 70,50 h -40"></path>
+                                    <path class="line bottom transition-all duration-300"
+                                        d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- Header Navigation System End -->
+
+        <!-- Blurred Backdrop Overlay -->
+        <div id="drawerOverlay"
+            class="fixed inset-0 z-40 hidden bg-black/60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+        </div>
+
+        <!-- Mobile Drawer Navigation Menu (Light & Dark Mode Supported) -->
+        <div id="mobileDrawerMenu"
+            class="cv_header_menu mobile-drawer fixed inset-y-0 right-0 z-50 w-full max-w-[320px] bg-white/90 border-l border-zinc-200/80 p-6 shadow-[0_0_50px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform translate-x-full flex flex-col justify-between dark:bg-zinc-950/90 dark:border-zinc-900 dark:shadow-[0_0_50px_rgba(0,0,0,0.4)]">
+
+            <div class="flex flex-col h-full justify-between">
+
+                <!-- Top Area: Branding & Minimal Close Trigger -->
+                <div class="flex items-center justify-between border-b border-zinc-100 pb-5 dark:border-zinc-900">
+                    <div class="flex flex-col gap-0.5">
+                        <span
+                            class="text-zinc-900 font-mono text-xs font-bold tracking-widest uppercase dark:text-zinc-100">Navigation</span>
+                        <span class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase">Menu Engine</span>
+                    </div>
+                    <button
+                        class="cv_menu_close group flex h-9 w-9 items-center justify-center rounded-lg border border-zinc-200/60 bg-zinc-50 text-zinc-500 transition-all duration-300 hover:bg-zinc-100 hover:text-zinc-950 dark:border-zinc-800/60 dark:bg-zinc-900/40 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100">
+                        <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Middle Area: Refined Navigation Links Stack -->
+                <nav class="flex-1 py-6 overflow-y-auto scrollbar-none">
+                    <ul class="cv_menus flex flex-col gap-1 font-mono text-xs uppercase tracking-widest">
+                        <li>
+                            <a class="nav-link block rounded-lg px-4 py-3.5 text-zinc-600 transition-all duration-300 hover:bg-zinc-100/80 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900/50 dark:hover:text-zinc-100"
+                                href="#home">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link block rounded-lg px-4 py-3.5 text-zinc-600 transition-all duration-300 hover:bg-zinc-100/80 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900/50 dark:hover:text-zinc-100"
+                                href="#about">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link block rounded-lg px-4 py-3.5 text-zinc-600 transition-all duration-300 hover:bg-zinc-100/80 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900/50 dark:hover:text-zinc-100"
+                                href="#exprience">
+                                Experience
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link block rounded-lg px-4 py-3.5 text-zinc-600 transition-all duration-300 hover:bg-zinc-100/80 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900/50 dark:hover:text-zinc-100"
+                                href="#portfolio">
+                                My Work
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link block rounded-lg px-4 py-3.5 text-zinc-600 transition-all duration-300 hover:bg-zinc-100/80 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900/50 dark:hover:text-zinc-100"
+                                href="#strength">
+                                Strength
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link block rounded-lg px-4 py-3.5 text-zinc-600 transition-all duration-300 hover:bg-zinc-100/80 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900/50 dark:hover:text-zinc-100"
+                                href="#education">
+                                Education
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link block rounded-lg px-4 py-3.5 text-zinc-600 transition-all duration-300 hover:bg-zinc-100/80 hover:text-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900/50 dark:hover:text-zinc-100"
+                                href="#contactMe">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Bottom Area: Clean Social Icons Footer Card -->
+                <div class="pt-5 border-t border-zinc-100 dark:border-zinc-900">
+                    <p
+                        class="text-center font-mono text-[10px] uppercase tracking-widest text-zinc-400 mb-4 dark:text-zinc-500">
+                        Connect Socially</p>
+                    <ul class="grid grid-cols-4 gap-2">
+                        <li>
+                            <a href="https://www.facebook.com/nearestboy.akash" target="_blank" aria-label="Facebook"
+                                class="w-full h-11 flex items-center justify-center rounded-lg border border-zinc-200 bg-white text-zinc-500 transition-all duration-200 hover:bg-zinc-50 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-100">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z'/></svg>"
+                                    class="w-4 h-4 opacity-75 dark:invert" alt="Facebook" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/s-m-mahfujur-rahman/" target="_blank"
+                                aria-label="LinkedIn"
+                                class="w-full h-11 flex items-center justify-center rounded-lg border border-zinc-200 bg-white text-zinc-500 transition-all duration-200 hover:bg-zinc-50 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-100">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z'/></svg>"
+                                    class="w-4 h-4 opacity-75 dark:invert" alt="LinkedIn" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/8801954335310" target="_blank" aria-label="WhatsApp"
+                                class="w-full h-11 flex items-center justify-center rounded-lg border border-zinc-200 bg-white text-zinc-500 transition-all duration-200 hover:bg-zinc-50 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-100">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 11.948.01c3.177.001 6.161 1.24 8.402 3.486 2.24 2.246 3.475 5.232 3.476 8.411-.004 6.597-5.342 11.935-11.893 11.935-2.005-.001-3.973-.507-5.714-1.468L0 24zm6.521-2.453c1.647.977 3.263 1.488 4.872 1.489 5.352 0 9.707-4.32 9.71-9.632.002-2.573-1.002-4.991-2.828-6.819-1.826-1.828-4.249-2.831-6.83-2.832-5.356 0-9.714 4.321-9.717 9.635-.001 1.706.467 3.371 1.356 4.834l-.993 3.626 3.71-.973zm11.239-5.32c-.287-.144-1.697-.838-1.959-.933-.262-.096-.453-.144-.644.144-.191.287-.739.933-.906 1.124-.167.191-.334.215-.621.072-2.316-1.161-3.415-1.7-4.796-4.067-.367-.629.367-.584 1.051-1.95.119-.239.06-.448-.03-.64-.09-.191-.739-1.777-1.014-2.44-.268-.644-.543-.557-.739-.567-.191-.01-.406-.012-.621-.012-.215 0-.567.081-.861.406-.294.325-1.122 1.099-1.122 2.678 0 1.578 1.146 3.106 1.305 3.32.16.215 2.256 3.444 5.465 4.83.764.33 1.36.527 1.824.674.767.244 1.467.21 2.02.128.617-.092 1.697-.693 1.936-1.363.239-.67.239-1.243.167-1.363-.072-.12-.262-.215-.549-.359z'/></svg>"
+                                    class="w-4 h-4 opacity-75 dark:invert" alt="WhatsApp" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/ajmain_akash/" target="_blank" aria-label="Instagram"
+                                class="w-full h-11 flex items-center justify-center rounded-lg border border-zinc-200 bg-white text-zinc-500 transition-all duration-200 hover:bg-zinc-50 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:bg-zinc-900/60 dark:hover:text-zinc-100">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z'/></svg>"
+                                    class="w-4 h-4 opacity-75 dark:invert" alt="Instagram" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Home Section Start -->
+        <section
+            class="relative bg-zinc-50 text-zinc-800 py-20 lg:py-28 overflow-hidden border-b border-zinc-200/80 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100 dark:border-zinc-900/50"
+            id="home">
+
+            <!-- Subtle technological grid mask line overlay (Opacity and color adapt gracefully to both modes) -->
+            <div
+                class="absolute inset-0 bg-[linear-gradient(to_right,#1f293708_1px,transparent_1px),linear-gradient(to_bottom,#1f293708_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none dark:bg-[linear-gradient(to_right,#1f293715_1px,transparent_1px),linear-gradient(to_bottom,#1f293715_1px,transparent_1px)]">
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-start">
+
+                    <!-- Profile Frame Column (5 Cols) -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-start">
+                        <div class="relative w-full max-w-sm group" data-aos="zoom-in-down">
+                            <!-- Frame Container -->
+                            <div
+                                class="relative overflow-hidden rounded-lg border border-zinc-200 bg-white/60 p-2 backdrop-blur-md transition-all duration-500 group-hover:border-zinc-300/80 dark:border-zinc-800 dark:bg-zinc-900/30 dark:group-hover:border-zinc-700/80">
+                                <div class="aspect-[11/16] w-full overflow-hidden rounded bg-zinc-100 dark:bg-zinc-950">
+                                    <img src="assets/images/s-m-mahfujur-rahman/i.png"
+                                        class="w-full h-full object-cover contrast-115 brightness-95 transition-all duration-700 ease-out group-hover:scale-102 group-hover:grayscale-0"
+                                        alt="S. M. Mahfujur Rahman" loading="lazy" />
+                                </div>
+                            </div>
+
+                            <!-- Action Link Plate & Social Grid -->
+                            <div class="flex flex-wrap items-center gap-5 pt-4 px-2">
+
+                                <!-- Social Icon Grid -->
+                                <ul class="flex items-center gap-2">
+                                    <li>
+                                        <a href="https://www.facebook.com/akash.ajmain" target="_blank"
+                                            class="w-10 h-10 flex items-center justify-center rounded border border-zinc-200 bg-white text-zinc-500 hover:text-zinc-900 hover:border-zinc-300 transition-all duration-200 dark:border-zinc-800/80 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:border-zinc-700">
+                                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z'/></svg>"
+                                                class="w-4 h-4 opacity-70 transition-opacity dark:invert" alt="Facebook"
+                                                loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/s-m-mahfujur-rahman/" target="_blank"
+                                            class="w-10 h-10 flex items-center justify-center rounded border border-zinc-200 bg-white text-zinc-500 hover:text-zinc-900 hover:border-zinc-300 transition-all duration-200 dark:border-zinc-800/80 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:border-zinc-700">
+                                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z'/></svg>"
+                                                class="w-4 h-4 opacity-70 transition-opacity dark:invert" alt="LinkedIn"
+                                                loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/MahfujuRahman" target="_blank"
+                                            class="w-10 h-10 flex items-center justify-center rounded border border-zinc-200 bg-white text-zinc-500 hover:text-zinc-900 hover:border-zinc-300 transition-all duration-200 dark:border-zinc-800/80 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:border-zinc-700">
+                                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/></svg>"
+                                                class="w-4 h-4 opacity-70 transition-opacity dark:invert" alt="GitHub"
+                                                loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/8801954335310" target="_blank"
+                                            class="w-10 h-10 flex items-center justify-center rounded border border-zinc-200 bg-white text-zinc-500 hover:text-zinc-900 hover:border-zinc-300 transition-all duration-200 dark:border-zinc-800/80 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:border-zinc-700">
+                                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 11.948.01c3.177.001 6.161 1.24 8.402 3.486 2.24 2.246 3.475 5.232 3.476 8.411-.004 6.597-5.342 11.935-11.893 11.935-2.005-.001-3.973-.507-5.714-1.468L0 24zm6.521-2.453c1.647.977 3.263 1.488 4.872 1.489 5.352 0 9.707-4.32 9.71-9.632.002-2.573-1.002-4.991-2.828-6.819-1.826-1.828-4.249-2.831-6.83-2.832-5.356 0-9.714 4.321-9.717 9.635-.001 1.706.467 3.371 1.356 4.834l-.993 3.626 3.71-.973zm11.239-5.32c-.287-.144-1.697-.838-1.959-.933-.262-.096-.453-.144-.644.144-.191.287-.739.933-.906 1.124-.167.191-.334.215-.621.072-2.316-1.161-3.415-1.7-4.796-4.067-.367-.629.367-.584 1.051-1.95.119-.239.06-.448-.03-.64-.09-.191-.739-1.777-1.014-2.44-.268-.644-.543-.557-.739-.567-.191-.01-.406-.012-.621-.012-.215 0-.567.081-.861.406-.294.325-1.122 1.099-1.122 2.678 0 1.578 1.146 3.106 1.305 3.32.16.215 2.256 3.444 5.465 4.83.764.33 1.36.527 1.824.674.767.244 1.467.21 2.02.128.617-.092 1.697-.693 1.936-1.363.239-.67.239-1.243.167-1.363-.072-.12-.262-.215-.549-.359z'/></svg>"
+                                                class="w-4 h-4 opacity-70 transition-opacity dark:invert" alt="WhatsApp"
+                                                loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/ajmain_akash/" target="_blank"
+                                            class="w-10 h-10 flex items-center justify-center rounded border border-zinc-200 bg-white text-zinc-500 hover:text-zinc-900 hover:border-zinc-300 transition-all duration-200 dark:border-zinc-800/80 dark:bg-zinc-900/20 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:border-zinc-700">
+                                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'><path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z'/></svg>"
+                                                class="w-4 h-4 opacity-70 transition-opacity dark:invert"
+                                                alt="Instagram" loading="lazy" />
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Primary CTA Button (High-contrast dark button in light mode, clean light button in dark mode) -->
+                                <a href="#contactMe"
+                                    class="relative group overflow-hidden px-8 py-3 bg-zinc-900 text-zinc-50 font-medium text-sm rounded transition-all duration-300 hover:bg-zinc-850 hover:shadow-md dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-white shadow-sm">
+                                    Hire Me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Column (7 Cols) -->
+                    <div class="lg:col-span-7 space-y-10">
+                        <div class="space-y-4 mb-4" data-aos="fade-right">
+
+                            <!-- Available Indicator Badge -->
+                            <div class="inline-flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span
+                                    class="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Available
+                                    for Contracts & Roles</span>
+                            </div>
+
+                            <!-- Introductions -->
+                            <div class="space-y-2">
+                                <h5 class="text-sm font-mono text-zinc-500 uppercase tracking-wider dark:text-zinc-400">
+                                    Software Engineer (Developer)</h5>
+                                <h1
+                                    class="text-4xl sm:text-5xl font-normal tracking-tight text-zinc-800 flex items-center gap-3 transition-colors dark:text-zinc-100">
+                                    Hello!
+                                    <span class="inline-block w-8 h-8 opacity-80">
+                                        <img src="assets/images/hand.svg" class="w-full h-full" alt="Waving hand" />
+                                    </span>
+                                    I Am
+                                </h1>
+                                <!-- Targeted by JS for Typewriter / Dynamic Title Insertion -->
+                                <h1
+                                    class="cv_profile_name text-3xl sm:text-5xl font-semibold tracking-tight text-zinc-950 min-h-[1.2em] transition-colors dark:text-white">
+                                </h1>
+                            </div>
+
+                        </div>
+
+                        <!-- Profile Narrative Description -->
+                        <div class="space-y-6 text-zinc-600 border-t border-zinc-200 pt-6 dark:text-zinc-400 dark:border-zinc-900"
+                            data-aos="fade-left">
+                            <!-- Header Block -->
+                            <div class="space-y-1">
+                                <h4 class="text-base font-mono text-zinc-700 tracking-tight dark:text-zinc-300">
+                                    Full-Stack Software Engineer <span
+                                        class="text-zinc-300 dark:text-zinc-700">//</span>
+                                    4+ Years Experience
+                                </h4>
+                                <p class="text-xs font-mono text-zinc-400 dark:text-zinc-500">
+                                    Laravel &bull; Vue.js &bull; MERN Stack &bull; DevOps &bull; CI/CD
+                                </p>
+                            </div>
+
+                            <!-- Main Professional Narrative -->
+                            <div
+                                class="space-y-4 text-sm sm:text-base leading-relaxed text-zinc-600 font-light dark:text-zinc-400">
+                                <p class="text-justify">
+                                    With four years of experience in full-stack engineering, I specialize in designing
+                                    scalable, user-centric web applications. I deliver robust, clean architectures by
+                                    leveraging <span class="text-zinc-900 font-normal dark:text-zinc-200">Laravel</span>
+                                    and the <span class="text-zinc-900 font-normal dark:text-zinc-200">MERN stack</span>
+                                    (MongoDB, Express, React, Node.js), paired with highly responsive frontends built
+                                    using <span class="text-zinc-900 font-normal dark:text-zinc-200">Vue.js, JavaScript, jQuery, Ajax, Bootstrap,
+                                        and Tailwind CSS</span>.
+                                </p>
+                                <p class="text-justify">
+                                    To bridge the gap between development and operations, I integrate production-grade
+                                    DevOps methodologies. This includes managing vps and panels like Cpanel, AWS, Azure, GCP, hPanel, aaPanel and implementing secure containerization strategies
+                                    via <span class="text-zinc-900 font-normal dark:text-zinc-200">Docker</span> and
+                                    engineering automated <span
+                                        class="text-zinc-900 font-normal dark:text-zinc-200">CI/CD pipelines</span> to
+                                    guarantee seamless, fault-tolerant deployments and maximum system observability.
+                                </p>
+                            </div>
+
+                            <!-- Call to Action Link -->
+                            <a href="#contactMe"
+                                class="inline-flex items-center gap-2 text-sm font-mono text-zinc-700 hover:text-zinc-950 transition-colors duration-200 group dark:text-zinc-300 dark:hover:text-white">
+                                Let's build something functional.
+                                <span
+                                    class="transform transition-transform duration-200 group-hover:translate-x-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Home Section End -->
+
+        <!-- About Section Start -->
+        <section class="relative bg-zinc-950 text-zinc-100 py-20 lg:py-32 border-b border-zinc-900/50" id="about">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8" data-aos="fade-up">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                    <!-- Interactive Media & Stats Grid Column (5 Cols) -->
+                    <div class="lg:col-span-5 relative" data-aos="zoom-in-down">
+                        <!-- Main Profile Frame -->
+                        <div
+                            class="relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900/30 p-2 backdrop-blur-md">
+                            <div class="aspect-[4/5] w-full overflow-hidden rounded bg-zinc-950">
+                                <img src="assets/images/about3.png"
+                                    class="w-full h-full object-cover grayscale contrast-110 brightness-95 transition-all duration-500 hover:grayscale-0"
+                                    alt="S. M. Mahfujur Rahman Profile" />
+                            </div>
+                        </div>
+
+                        <!-- Float Experience Card (Bottom-Left overlap) -->
+                        <div class="absolute -bottom-6 -left-4 sm:-left-6 max-w-[170px] bg-zinc-900/90 border border-zinc-800/80 rounded p-4 shadow-xl backdrop-blur-md"
+                            data-aos="fade-up-right">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-semibold tracking-tight text-white">3+</span>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-zinc-400">Years</span>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1 leading-normal font-light">Professional Development
+                                Experience</p>
+                        </div>
+
+                        <!-- Float Rating Card (Top-Right overlap) -->
+                        <div class="absolute -top-6 -right-4 sm:-right-6 max-w-[170px] bg-zinc-900/90 border border-zinc-800/80 rounded p-4 shadow-xl backdrop-blur-md text-right"
+                            data-aos="fade-up-left">
+                            <div class="flex items-center justify-end gap-1.5">
+                                <img src="assets/images/rating.svg" class="w-4 h-4 filter invert"
+                                    alt="Star rating icon" />
+                                <span class="text-lg font-semibold text-white">5.0</span>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1 leading-normal font-light">55+ Verified Client Reviews
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- About Info Column (7 Cols) -->
+                    <div class="lg:col-span-7 space-y-8" data-aos="zoom-out-down">
+
+                        <!-- Section Header -->
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <span class="w-8 h-px bg-zinc-800"></span>
+                                <span class="text-xs font-mono uppercase tracking-widest text-zinc-400">01 // Profile
+                                    Summary</span>
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white">About Me</h2>
+                        </div>
+
+                        <!-- Narrative Blocks -->
+                        <div
+                            class="space-y-6 text-sm sm:text-base leading-relaxed text-zinc-400 font-light text-justify">
+                            <div class="space-y-1">
+                                <h3 class="text-xs font-mono uppercase tracking-wider text-zinc-300">Who I Am</h3>
+                                <p>
+                                    I am a freelance full-stack web developer, driven by a blend of technical expertise
+                                    and creative problem-solving. My journey began with a solid educational foundation
+                                    in Computer Science at <span class="text-zinc-200 font-normal">Daffodil
+                                        International University</span>, where I honed my core skills in software
+                                    engineering. Currently, I balance full-time responsibilities as a Software Engineer
+                                    at <span class="text-zinc-200 font-normal">RazinSoft Ltd</span> alongside targeted,
+                                    high-impact freelance projects.
+                                </p>
+                            </div>
+
+                            <p>
+                                Specializing in building robust backend architectures with <span
+                                    class="text-zinc-200 font-normal">Laravel</span>, I integrate clean frontend
+                                interfaces with HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, jQuery, Ajax, and Axios.
+                                My long-term focus is to build dependable systems that simplify business processes and
+                                establish clear, friction-free experiences for end users.
+                            </p>
+
+                            <p>
+                                Committed to modern development paradigms, I continually expand my proficiency in
+                                frontend ecosystems like <span class="text-zinc-200 font-normal">Vue.js</span> and <span
+                                    class="text-zinc-200 font-normal">React</span>. My mission is to refine my
+                                engineering capabilities daily, deploying scalable, performant codebases across every
+                                system I manage.
+                            </p>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-zinc-900"
+                            data-aos="fade-down-left">
+                            <a href="assets/cv/S. M. Mahfujur Rahman.pdf"
+                                class="inline-flex items-center justify-center px-6 py-3 border border-zinc-850 bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-850 hover:border-zinc-700 font-mono text-xs uppercase tracking-wider rounded transition-all duration-300"
+                                target="_blank" download>
+                                Download Resume
+                            </a>
+                            <a href="#contactMe"
+                                class="inline-flex items-center justify-center px-6 py-3 bg-zinc-100 text-zinc-950 hover:bg-white font-mono text-xs uppercase tracking-wider rounded font-medium transition-all duration-300">
+                                Hire Me
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+
+
+        <!-- Footer Section Start -->
+        <footer class="relative bg-zinc-950 text-zinc-100 py-12 border-t border-zinc-900/50" id="footer">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+
+                    <!-- Left Stack: Copyright System -->
+                    <div class="text-center sm:text-left order-2 sm:order-1">
+                        <p class="text-xs font-mono tracking-wide text-zinc-500">
+                            Copyright © <span id="copyYear" class="text-zinc-400">2026</span>.
+                            <span class="text-zinc-300 font-medium hover:text-white cursor-pointer transition-colors">S.
+                                M. Mahfujur Rahman's</span>
+                            Portfolio. All Rights Reserved.
+                        </p>
+                    </div>
+
+                    <!-- Right Stack: Engineering Platform Social Connections -->
+                    <div class="order-1 sm:order-2">
+                        <ul class="flex flex-wrap gap-3 items-center justify-center">
+
+                            <!-- Facebook -->
+                            <li>
+                                <a href="https://www.facebook.com/akash.ajmain" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded border border-zinc-900 bg-zinc-900/20 text-zinc-400 hover:border-zinc-800 hover:bg-zinc-900/50 hover:text-white transition-all duration-300 group">
+                                    <img src="assets/images/fb.svg"
+                                        class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity filter grayscale invert"
+                                        alt="Facebook" />
+                                </a>
+                            </li>
+
+                            <!-- LinkedIn -->
+                            <li>
+                                <a href="https://www.linkedin.com/in/s-m-mahfujur-rahman/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded border border-zinc-900 bg-zinc-900/20 text-zinc-400 hover:border-zinc-800 hover:bg-zinc-900/50 hover:text-white transition-all duration-300 group">
+                                    <img src="assets/images/in.svg"
+                                        class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity filter grayscale invert"
+                                        alt="LinkedIn" />
+                                </a>
+                            </li>
+
+                            <!-- GitHub -->
+                            <li>
+                                <a href="https://github.com/MahfujuRahman" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded border border-zinc-900 bg-zinc-900/20 text-zinc-400 hover:border-zinc-800 hover:bg-zinc-900/50 hover:text-white transition-all duration-300 group">
+                                    <img src="assets/images/git.svg"
+                                        class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity filter grayscale invert"
+                                        alt="GitHub" />
+                                </a>
+                            </li>
+
+                            <!-- WhatsApp -->
+                            <li>
+                                <a href="https://wa.me/8801954335310" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded border border-zinc-900 bg-zinc-900/20 text-zinc-400 hover:border-zinc-800 hover:bg-zinc-900/50 hover:text-white transition-all duration-300 group">
+                                    <img src="assets/images/whatsapp.svg"
+                                        class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity filter grayscale invert"
+                                        alt="WhatsApp" />
+                                </a>
+                            </li>
+
+                            <!-- Instagram -->
+                            <li>
+                                <a href="https://www.instagram.com/ajmain_akash/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex h-9 w-9 items-center justify-center rounded border border-zinc-900 bg-zinc-900/20 text-zinc-400 hover:border-zinc-800 hover:bg-zinc-900/50 hover:text-white transition-all duration-300 group">
+                                    <img src="assets/images/instagram.svg"
+                                        class="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity filter grayscale invert"
+                                        alt="Instagram" />
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+    </div>
+
+    <!--=== Optional JavaScript ===-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/SmoothScroll.min.js"></script>
+    <script src="assets/js/ityped.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script src="assets/js/navbar.js"></script>
+    <script>
+        AOS.init({
+            delay: 100,
+            duration: 700,
+        });
+    </script>
+    <script type="text/javascript">
+        $("[data-aos]").parent().addClass("extra_space_aos");
+    </script>
+</body>
+
+</html>
