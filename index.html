@@ -253,7 +253,7 @@
                     </div>
 
                     <!-- Desktop & Theme Engine Controller Layout Area -->
-                    <div class="flex items-center gap-6">
+                    <div class="flex items-center gap-3 lg:gap-6">
                         <!-- Desktop Navigation Menu Links -->
                         <div class="hidden lg:flex lg:items-center lg:gap-8" id="navbarSupportedContent">
                             <ul class="navbar-nav bix-menu cv_menus flex items-center gap-8 font-mono text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400"
@@ -443,7 +443,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
 
@@ -467,7 +466,7 @@
                             <div
                                 class="relative overflow-hidden rounded-lg border border-zinc-200 bg-white/60 p-2 backdrop-blur-md transition-all duration-500 group-hover:border-zinc-300/80 dark:border-zinc-800 dark:bg-zinc-900/30 dark:group-hover:border-zinc-700/80">
                                 <div class="aspect-[11/16] w-full overflow-hidden rounded bg-zinc-100 dark:bg-zinc-950">
-                                    <img src="assets/images/s-m-mahfujur-rahman/i.png"
+                                    <img src="assets/images/personal/hero/s m mahfujur rahman.png"
                                         class="w-full h-full object-cover contrast-115 brightness-95 transition-all duration-700 ease-out group-hover:scale-102 group-hover:grayscale-0"
                                         alt="S. M. Mahfujur Rahman" loading="lazy" />
                                 </div>
@@ -549,7 +548,7 @@
                                     class="text-4xl sm:text-5xl font-normal tracking-tight text-zinc-800 flex items-center gap-3 transition-colors dark:text-zinc-100">
                                     Hello!
                                     <span class="inline-block w-8 h-8 opacity-80">
-                                        <img src="assets/images/hand.svg" class="w-full h-full" alt="Waving hand" />
+                                        <img src="assets/images/svg/hand.svg" class="w-full h-full" alt="Waving hand" loading="lazy"/>
                                     </span>
                                     I Am
                                 </h1>
@@ -585,12 +584,14 @@
                                     leveraging <span class="text-zinc-900 font-normal dark:text-zinc-200">Laravel</span>
                                     and the <span class="text-zinc-900 font-normal dark:text-zinc-200">MERN stack</span>
                                     (MongoDB, Express, React, Node.js), paired with highly responsive frontends built
-                                    using <span class="text-zinc-900 font-normal dark:text-zinc-200">Vue.js, JavaScript, jQuery, Ajax, Bootstrap,
+                                    using <span class="text-zinc-900 font-normal dark:text-zinc-200">Vue.js, JavaScript,
+                                        jQuery, Ajax, Bootstrap,
                                         and Tailwind CSS</span>.
                                 </p>
                                 <p class="text-justify">
                                     To bridge the gap between development and operations, I integrate production-grade
-                                    DevOps methodologies. This includes managing vps and panels like Cpanel, AWS, Azure, GCP, hPanel, aaPanel and implementing secure containerization strategies
+                                    DevOps methodologies. This includes managing vps and panels like Cpanel, AWS, Azure,
+                                    GCP, hPanel, aaPanel and implementing secure containerization strategies
                                     via <span class="text-zinc-900 font-normal dark:text-zinc-200">Docker</span> and
                                     engineering automated <span
                                         class="text-zinc-900 font-normal dark:text-zinc-200">CI/CD pipelines</span> to
@@ -614,42 +615,54 @@
         <!-- Home Section End -->
 
         <!-- About Section Start -->
-        <section class="relative bg-zinc-950 text-zinc-100 py-20 lg:py-32 border-b border-zinc-900/50" id="about">
+        <section
+            class="relative bg-zinc-50 text-zinc-800 py-20 overflow-hidden lg:py-32 border-b border-zinc-200 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100 dark:border-zinc-900/50"
+            id="about">
             <div class="max-w-6xl mx-auto px-6 lg:px-8" data-aos="fade-up">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
                     <!-- Interactive Media & Stats Grid Column (5 Cols) -->
-                    <div class="lg:col-span-5 relative" data-aos="zoom-in-down">
-                        <!-- Main Profile Frame -->
+                    <div class="lg:col-span-5 relative group" data-aos="zoom-in-down">
+                        <!-- Main Profile Frame (Matches Home Section styling exactly for architectural continuity) -->
                         <div
-                            class="relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900/30 p-2 backdrop-blur-md">
-                            <div class="aspect-[4/5] w-full overflow-hidden rounded bg-zinc-950">
-                                <img src="assets/images/about3.png"
-                                    class="w-full h-full object-cover grayscale contrast-110 brightness-95 transition-all duration-500 hover:grayscale-0"
-                                    alt="S. M. Mahfujur Rahman Profile" />
+                            class="relative overflow-hidden rounded-lg border border-zinc-200 bg-white/60 p-2 backdrop-blur-md transition-all duration-500 group-hover:border-zinc-300/80 dark:border-zinc-800 dark:bg-zinc-900/30 dark:group-hover:border-zinc-700/80">
+                            <div class="aspect-[4/5] w-full overflow-hidden rounded bg-zinc-100 dark:bg-zinc-950">
+                                <img src="assets/images/personal/about/s m mahfujur rahman.png"
+                                    class="w-full h-full object-cover transition-all duration-700 ease-out"
+                                    alt="S. M. Mahfujur Rahman Profile" loading="lazy"/>
                             </div>
                         </div>
 
                         <!-- Float Experience Card (Bottom-Left overlap) -->
-                        <div class="absolute -bottom-6 -left-4 sm:-left-6 max-w-[170px] bg-zinc-900/90 border border-zinc-800/80 rounded p-4 shadow-xl backdrop-blur-md"
+                        <div class="absolute -bottom-6 -left-4 sm:-left-6 max-w-[170px] bg-white/90 border border-zinc-200 rounded p-4 shadow-lg backdrop-blur-md transition-all duration-300 dark:bg-zinc-900/90 dark:border-zinc-800/80 dark:shadow-xl"
                             data-aos="fade-up-right">
                             <div class="flex items-baseline gap-1">
-                                <span class="text-3xl font-semibold tracking-tight text-white">3+</span>
-                                <span class="text-[10px] font-mono uppercase tracking-widest text-zinc-400">Years</span>
+                                <span
+                                    class="text-3xl font-semibold tracking-tight text-zinc-950 transition-colors dark:text-white">3+</span>
+                                <span
+                                    class="text-[10px] font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Years</span>
                             </div>
-                            <p class="text-xs text-zinc-400 mt-1 leading-normal font-light">Professional Development
-                                Experience</p>
+                            <p class="text-xs text-zinc-600 mt-1 leading-normal font-light dark:text-zinc-400">
+                                Professional Development Experience
+                            </p>
                         </div>
 
                         <!-- Float Rating Card (Top-Right overlap) -->
-                        <div class="absolute -top-6 -right-4 sm:-right-6 max-w-[170px] bg-zinc-900/90 border border-zinc-800/80 rounded p-4 shadow-xl backdrop-blur-md text-right"
+                        <div class="absolute -top-6 -right-4 sm:-right-6 max-w-[170px] bg-white/90 border border-zinc-200 rounded p-4 shadow-lg backdrop-blur-md text-right transition-all duration-300 dark:bg-zinc-900/90 dark:border-zinc-800/80 dark:shadow-xl"
                             data-aos="fade-up-left">
                             <div class="flex items-center justify-end gap-1.5">
-                                <img src="assets/images/rating.svg" class="w-4 h-4 filter invert"
-                                    alt="Star rating icon" />
-                                <span class="text-lg font-semibold text-white">5.0</span>
+                                <!-- Swapped out image filter for crisp, responsive inline SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-4 h-4 text-zinc-700 dark:text-zinc-300">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span
+                                    class="text-lg font-semibold text-zinc-950 transition-colors dark:text-white">5.0</span>
                             </div>
-                            <p class="text-xs text-zinc-400 mt-1 leading-normal font-light">55+ Verified Client Reviews
+                            <p class="text-xs text-zinc-600 mt-1 leading-normal font-light dark:text-zinc-400">
+                                55+ Verified Client Reviews
                             </p>
                         </div>
                     </div>
@@ -660,32 +673,39 @@
                         <!-- Section Header -->
                         <div class="space-y-2">
                             <div class="flex items-center gap-2">
-                                <span class="w-8 h-px bg-zinc-800"></span>
-                                <span class="text-xs font-mono uppercase tracking-widest text-zinc-400">01 // Profile
-                                    Summary</span>
+                                <span class="w-8 h-px bg-zinc-300 dark:bg-zinc-800"></span>
+                                <span
+                                    class="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400">01
+                                    // Profile Summary</span>
                             </div>
-                            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white">About Me</h2>
+                            <h2
+                                class="text-3xl sm:text-4xl font-semibold tracking-tight text-zinc-950 transition-colors dark:text-white">
+                                About Me</h2>
                         </div>
 
                         <!-- Narrative Blocks -->
                         <div
-                            class="space-y-6 text-sm sm:text-base leading-relaxed text-zinc-400 font-light text-justify">
+                            class="space-y-6 text-sm sm:text-base leading-relaxed text-zinc-600 font-light text-justify dark:text-zinc-400">
                             <div class="space-y-1">
-                                <h3 class="text-xs font-mono uppercase tracking-wider text-zinc-300">Who I Am</h3>
+                                <h3 class="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-300">
+                                    Who I Am</h3>
                                 <p>
                                     I am a freelance full-stack web developer, driven by a blend of technical expertise
                                     and creative problem-solving. My journey began with a solid educational foundation
-                                    in Computer Science at <span class="text-zinc-200 font-normal">Daffodil
+                                    in Computer Science at <span
+                                        class="text-zinc-900 font-normal dark:text-zinc-200">Daffodil
                                         International University</span>, where I honed my core skills in software
                                     engineering. Currently, I balance full-time responsibilities as a Software Engineer
-                                    at <span class="text-zinc-200 font-normal">RazinSoft Ltd</span> alongside targeted,
+                                    at <span class="text-zinc-900 font-normal dark:text-zinc-200">RazinSoft Ltd</span>
+                                    alongside targeted,
                                     high-impact freelance projects.
                                 </p>
                             </div>
 
                             <p>
                                 Specializing in building robust backend architectures with <span
-                                    class="text-zinc-200 font-normal">Laravel</span>, I integrate clean frontend
+                                    class="text-zinc-900 font-normal dark:text-zinc-200">Laravel</span>, I integrate
+                                clean frontend
                                 interfaces with HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, jQuery, Ajax, and Axios.
                                 My long-term focus is to build dependable systems that simplify business processes and
                                 establish clear, friction-free experiences for end users.
@@ -693,23 +713,27 @@
 
                             <p>
                                 Committed to modern development paradigms, I continually expand my proficiency in
-                                frontend ecosystems like <span class="text-zinc-200 font-normal">Vue.js</span> and <span
-                                    class="text-zinc-200 font-normal">React</span>. My mission is to refine my
+                                frontend ecosystems like <span
+                                    class="text-zinc-900 font-normal dark:text-zinc-200">Vue.js</span> and <span
+                                    class="text-zinc-900 font-normal dark:text-zinc-200">React</span>. My mission is to
+                                refine my
                                 engineering capabilities daily, deploying scalable, performant codebases across every
                                 system I manage.
                             </p>
                         </div>
 
-                        <!-- Actions -->
-                        <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-zinc-900"
+                        <!-- Actions Footer -->
+                        <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-zinc-200 dark:border-zinc-900"
                             data-aos="fade-down-left">
+                            <!-- Elegant secondary button for light mode / outlined for dark mode -->
                             <a href="assets/cv/S. M. Mahfujur Rahman.pdf"
-                                class="inline-flex items-center justify-center px-6 py-3 border border-zinc-850 bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-850 hover:border-zinc-700 font-mono text-xs uppercase tracking-wider rounded transition-all duration-300"
+                                class="inline-flex items-center justify-center px-6 py-3 border border-zinc-300 bg-white text-zinc-700 hover:text-zinc-950 hover:bg-zinc-50 font-mono text-xs uppercase tracking-wider rounded transition-all duration-300 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:text-white dark:hover:bg-zinc-850"
                                 target="_blank" download>
                                 Download Resume
                             </a>
+                            <!-- Contrast flipping button matching the core theme configuration -->
                             <a href="#contactMe"
-                                class="inline-flex items-center justify-center px-6 py-3 bg-zinc-100 text-zinc-950 hover:bg-white font-mono text-xs uppercase tracking-wider rounded font-medium transition-all duration-300">
+                                class="inline-flex items-center justify-center px-6 py-3 bg-zinc-900 text-zinc-50 hover:bg-zinc-800 font-mono text-xs uppercase tracking-wider rounded font-medium transition-all duration-300 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-white">
                                 Hire Me
                             </a>
                         </div>
