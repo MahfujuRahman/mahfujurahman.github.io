@@ -443,6 +443,7 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
         </div>
 
@@ -1125,6 +1126,278 @@
         </section>
         <!-- Experience Section End -->
 
+        <!-- ========================================== -->
+        <!-- 3. MAIN PROJECT SECTION & BENTO GRID       -->
+        <!-- ========================================== -->
+        <section
+            class="relative bg-zinc-50 py-24 lg:py-32 text-zinc-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100 border-b border-zinc-200 dark:border-zinc-900/50"
+            id="portfolio">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-16">
+
+                <!-- Section Header -->
+                <div class="max-w-3xl space-y-4" data-aos="fade-up">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-px bg-zinc-400 dark:bg-zinc-600"></span>
+                        <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+                            Selected Works</span>
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl font-light tracking-tight text-zinc-900 dark:text-white">
+                        Engineering <span class="font-semibold">Showcase.</span>
+                    </h2>
+                    <p class="text-base leading-relaxed text-zinc-600 dark:text-zinc-400 font-light max-w-2xl">
+                        Explore a curated selection of my latest architectures, featuring multi-platform applications,
+                        dynamic dashboards, and experimental visual interfaces.
+                    </p>
+                </div>
+
+                <!-- Bento Grid Layout -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <!-- PROJECT 1: Spans 2 columns (The "Hero" Project) -->
+                    <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 md:col-span-2 flex flex-col justify-end min-h-[400px]"
+                        onclick="openProjectDetails(this)">
+
+                        <!-- Main Card Image -->
+                        <img src="assets/images/task-mangement/task-management.jpg" alt="Task Management"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/40 to-transparent">
+                        </div>
+
+                        <!-- Card Front Text -->
+                        <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
+                            <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Enterprise
+                                Platform</span>
+                            <h3 class="text-3xl font-semibold mb-2">Task Management System</h3>
+                            <div class="flex gap-2">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Laravel</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">WebSockets</span>
+                            </div>
+                        </div>
+
+                        <!-- ============================================== -->
+                        <!-- HIDDEN DATA FOR MODAL (You edit this easily!)  -->
+                        <!-- ============================================== -->
+                        <div class="hidden">
+                            <span class="proj-title">Task Management System</span>
+                            <span class="proj-time">Dec 2025</span>
+                            <span class="proj-category">Enterprise Platform</span>
+                            <a class="proj-link" href="https://example.com"></a>
+
+                            <!-- Add as many media items as you want here -->
+                            <div class="proj-media">
+                                <!-- Video Example -->
+                                <span class="proj-media-item" data-type="video" data-src="assets/videos/demo.mp4"
+                                    data-poster="assets/images/task-mangement/task-management.jpg"></span>
+                                <!-- Image Example -->
+                                <span class="proj-media-item" data-type="image" data-src="assets/images/task-mangement/task-management.jpg"
+                                    data-thumb="assets/images/task-mangement/task-management.jpg"></span>
+                            </div>
+
+                            <!-- Rich Description HTML -->
+                            <div class="proj-rich-content">
+                                <h3>Project Overview</h3>
+                                <p>A comprehensive multi-platform task management application designed to streamline
+                                    workflow and boost productivity across web and mobile platforms.</p>
+
+                                <h3>The Challenge</h3>
+                                <p>Handling real-time state synchronization across thousands of active organizational
+                                    nodes without degrading database performance.</p>
+
+                                <h3>Core Features</h3>
+                                <ul>
+                                    <li>Instant real-time communications powered by WebSockets</li>
+                                    <li>Database-per-tenant runtime data container routing</li>
+                                    <li>Targeted low-latency update push notification queues</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT Standard Card -->
+                    <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]"
+                        onclick="openProjectDetails(this)">
+
+                        <img src="assets/images/task-mangement/task-management.jpg" alt="Portfolio Dashboard"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent">
+                        </div>
+
+                        <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
+                            <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Data Viz</span>
+                            <h3 class="text-2xl font-semibold mb-2">Metrics Dashboard</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Vue.js</span>
+                            </div>
+                        </div>
+
+                        <!-- Hidden Data -->
+                        <div class="hidden">
+                            <span class="proj-title">Metrics Dashboard</span>
+                            <span class="proj-time">1 month ago</span>
+                            <span class="proj-category">Data Visualization</span>
+
+                             <!-- Add as many media items as you want here -->
+                            <div class="proj-media">
+                                <!-- Video Example -->
+                                <span class="proj-media-item" data-type="video" data-src="assets/videos/demo.mp4"
+                                    data-poster="assets/images/task-mangement/task-management.jpg"></span>
+                                <!-- Image Example -->
+                                <span class="proj-media-item" data-type="image" data-src="assets/images/task-mangement/task-management.jpg"
+                                    data-thumb="assets/images/task-mangement/task-management.jpg"></span>
+                            </div>
+
+                            <div class="proj-rich-content">
+                                <h3>Architectural Overview</h3>
+                                <p>An interactive portfolio metrics dashboard showcasing modular project layouts and
+                                    state-driven search dynamic filtering matrices.</p>
+                                <p>Built intentionally for cross-device consistency and flexible mobile interface
+                                    rendering maps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- PROJECT Standard Card -->
+                    <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]"
+                        onclick="openProjectDetails(this)">
+
+                        <img src="assets/images/task-mangement/task-management.jpg" alt="Portfolio Dashboard"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent">
+                        </div>
+
+                        <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
+                            <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Data Viz</span>
+                            <h3 class="text-2xl font-semibold mb-2">Metrics Dashboard</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Vue.js</span>
+                            </div>
+                        </div>
+
+                        <!-- Hidden Data -->
+                        <div class="hidden">
+                            <span class="proj-title">Metrics Dashboard</span>
+                            <span class="proj-time">1 month ago</span>
+                            <span class="proj-category">Data Visualization</span>
+
+                             <!-- Add as many media items as you want here -->
+                            <div class="proj-media">
+                                <!-- Video Example -->
+                                <span class="proj-media-item" data-type="video" data-src="assets/videos/demo.mp4"
+                                    data-poster="assets/images/task-mangement/task-management.jpg"></span>
+                                <!-- Image Example -->
+                                <span class="proj-media-item" data-type="image" data-src="assets/images/task-mangement/task-management.jpg"
+                                    data-thumb="assets/images/task-mangement/task-management.jpg"></span>
+                            </div>
+
+                            <div class="proj-rich-content">
+                                <h3>Architectural Overview</h3>
+                                <p>An interactive portfolio metrics dashboard showcasing modular project layouts and
+                                    state-driven search dynamic filtering matrices.</p>
+                                <p>Built intentionally for cross-device consistency and flexible mobile interface
+                                    rendering maps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- PROJECT Standard Card -->
+                    <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]"
+                        onclick="openProjectDetails(this)">
+
+                        <img src="assets/images/task-mangement/task-management.jpg" alt="Portfolio Dashboard"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent">
+                        </div>
+
+                        <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
+                            <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Data Viz</span>
+                            <h3 class="text-2xl font-semibold mb-2">Metrics Dashboard</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Vue.js</span>
+                            </div>
+                        </div>
+
+                        <!-- Hidden Data -->
+                        <div class="hidden">
+                            <span class="proj-title">Metrics Dashboard</span>
+                            <span class="proj-time">1 month ago</span>
+                            <span class="proj-category">Data Visualization</span>
+
+                             <!-- Add as many media items as you want here -->
+                            <div class="proj-media">
+                                <!-- Video Example -->
+                                <span class="proj-media-item" data-type="video" data-src="assets/videos/demo.mp4"
+                                    data-poster="assets/images/task-mangement/task-management.jpg"></span>
+                                <!-- Image Example -->
+                                <span class="proj-media-item" data-type="image" data-src="assets/images/task-mangement/task-management.jpg"
+                                    data-thumb="assets/images/task-mangement/task-management.jpg"></span>
+                            </div>
+
+                            <div class="proj-rich-content">
+                                <h3>Architectural Overview</h3>
+                                <p>An interactive portfolio metrics dashboard showcasing modular project layouts and
+                                    state-driven search dynamic filtering matrices.</p>
+                                <p>Built intentionally for cross-device consistency and flexible mobile interface
+                                    rendering maps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- PROJECT Standard Card -->
+                    <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]"
+                        onclick="openProjectDetails(this)">
+
+                        <img src="assets/images/task-mangement/task-management.jpg" alt="Portfolio Dashboard"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent">
+                        </div>
+
+                        <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
+                            <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Data Viz</span>
+                            <h3 class="text-2xl font-semibold mb-2">Metrics Dashboard</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Vue.js</span>
+                            </div>
+                        </div>
+
+                        <!-- Hidden Data -->
+                        <div class="hidden">
+                            <span class="proj-title">Metrics Dashboard</span>
+                            <span class="proj-time">1 month ago</span>
+                            <span class="proj-category">Data Visualization</span>
+
+                             <!-- Add as many media items as you want here -->
+                            <div class="proj-media">
+                                <!-- Video Example -->
+                                <span class="proj-media-item" data-type="video" data-src="assets/videos/demo.mp4"
+                                    data-poster="assets/images/task-mangement/task-management.jpg"></span>
+                                <!-- Image Example -->
+                                <span class="proj-media-item" data-type="image" data-src="assets/images/task-mangement/task-management.jpg"
+                                    data-thumb="assets/images/task-mangement/task-management.jpg"></span>
+                            </div>
+
+                            <div class="proj-rich-content">
+                                <h3>Architectural Overview</h3>
+                                <p>An interactive portfolio metrics dashboard showcasing modular project layouts and
+                                    state-driven search dynamic filtering matrices.</p>
+                                <p>Built intentionally for cross-device consistency and flexible mobile interface
+                                    rendering maps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more project cards following the structure of PROJECT 2 above... -->
+
+                </div>
+            </div>
+        </section>
+
         <!-- Strengths & Expertise Section Start -->
         <section
             class="relative bg-zinc-50 py-24 lg:py-32 text-zinc-800 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100"
@@ -1805,6 +2078,96 @@
             </div>
         </footer>
         <!-- Footer Section End -->
+
+        <!-- ========================================== -->
+        <!-- 2. ADVANCED PROJECT MODAL OVERLAY          -->
+        <!-- ========================================== -->
+        <div id="projectModal"
+            class="fixed inset-0 z-[100] flex items-center justify-center bg-zinc-900/60 dark:bg-zinc-950/80 backdrop-blur-md p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300"
+            tabindex="-1" aria-hidden="true">
+
+            <div
+                class="relative w-full max-w-7xl max-h-[95vh] flex flex-col rounded-3xl border border-zinc-200 bg-white text-zinc-900 shadow-2xl dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100 overflow-hidden transform transition-all duration-300">
+
+                <!-- Top Action Ribbon -->
+                <div
+                    class="flex justify-between items-center px-6 py-4 border-b border-zinc-200 dark:border-zinc-900/80 bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-md z-10">
+                    <div class="flex items-center gap-3">
+                        <span class="flex h-2 w-2 rounded-full bg-zinc-900 dark:bg-white animate-pulse"></span>
+                        <span
+                            class="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Project
+                            Inspection View</span>
+                    </div>
+                    <button id="modalCloseBtn" aria-label="Close modal"
+                        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-zinc-200/50 text-zinc-600 hover:bg-zinc-300 hover:text-zinc-900 transition-all dark:bg-zinc-900/50 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Split Workspace Layout -->
+                <div class="flex-1 overflow-y-auto lg:overflow-hidden flex flex-col lg:flex-row">
+
+                    <!-- Left Side: Interactive Media Engine -->
+                    <div
+                        class="lg:w-3/5 p-6 bg-zinc-50 dark:bg-zinc-900/20 border-r border-zinc-200 dark:border-zinc-900/80 flex flex-col gap-4">
+                        <!-- Main Viewing Canvas -->
+                        <div id="modal-main-media"
+                            class="w-full flex-1 min-h-[40vh] lg:min-h-0 relative rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-950 overflow-hidden flex items-center justify-center shadow-inner">
+                            <!-- Injected via JS -->
+                        </div>
+
+                        <!-- Thumbnail Rail -->
+                        <div
+                            class="w-full overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-zinc-300 dark:scrollbar-thumb-zinc-700">
+                            <div id="modal-thumbnail-track" class="flex gap-3 min-w-max">
+                                <!-- Thumbs injected via JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Rich Description Document -->
+                    <div class="lg:w-2/5 p-6 sm:p-10 lg:overflow-y-auto">
+                        <div class="space-y-8">
+                            <!-- Header -->
+                            <div class="space-y-3 pb-6 border-b border-zinc-200 dark:border-zinc-800">
+                                <div class="flex items-center justify-between">
+                                    <span id="modal-category"
+                                        class="text-xs font-mono py-1 px-2 rounded-md bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400"></span>
+                                    <span id="modal-time" class="text-xs font-mono text-zinc-400"></span>
+                                </div>
+                                <h2 id="modal-title" class="text-3xl font-semibold tracking-tight leading-tight"></h2>
+                            </div>
+
+                            <!-- Dynamic Rich Content Area (Styling targets HTML injected from cards) -->
+                            <div id="modal-description-content" class="prose prose-zinc dark:prose-invert prose-sm sm:prose-base max-w-none 
+                        prose-headings:font-semibold prose-headings:tracking-tight 
+                        prose-a:text-zinc-900 dark:prose-a:text-white prose-a:underline-offset-4
+                        prose-li:marker:text-zinc-400">
+                                <!-- Injected via JS -->
+                            </div>
+
+                            <!-- Action Area -->
+                            <div class="pt-6 border-t border-zinc-200 dark:border-zinc-800">
+                                <a id="modal-external-link" href="#" target="_blank" rel="noopener noreferrer"
+                                    class="group hidden w-full items-center justify-center gap-3 rounded-xl bg-zinc-900 px-6 py-4 text-sm font-medium text-white transition-all hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200 shadow-lg">
+                                    <span>Launch Live Application</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--=== Optional JavaScript ===-->
@@ -1888,6 +2251,152 @@
                 }, 3000);
             }
         }
+    </script>
+
+    <!-- ========================================== -->
+    <!-- 1. PROJECT JS CONTROLLER                   -->
+    <!-- ========================================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById('projectModal');
+            const closeBtn = document.getElementById('modalCloseBtn');
+
+            // Modal Target Elements
+            const mainMediaContainer = document.getElementById('modal-main-media');
+            const thumbnailTrack = document.getElementById('modal-thumbnail-track');
+            const titleEl = document.getElementById('modal-title');
+            const timeEl = document.getElementById('modal-time');
+            const categoryEl = document.getElementById('modal-category');
+            const descEl = document.getElementById('modal-description-content');
+            const linkEl = document.getElementById('modal-external-link');
+
+            if (!modal) return;
+
+            // Helper: Stop all videos from playing when modal closes
+            const haltMedia = () => {
+                const videos = mainMediaContainer.querySelectorAll('video');
+                videos.forEach(vid => { vid.pause(); vid.removeAttribute('src'); vid.load(); });
+                mainMediaContainer.innerHTML = '';
+            };
+
+            const hideProjectModal = () => {
+                modal.classList.replace('opacity-100', 'opacity-0');
+                modal.classList.replace('pointer-events-auto', 'pointer-events-none');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('overflow-hidden');
+                setTimeout(haltMedia, 300); // Wait for transition
+            };
+
+            // Helper: Render main media (Video or Image)
+            const renderMainMedia = (type, src, poster = '') => {
+                mainMediaContainer.innerHTML = ''; // Clear current
+                mainMediaContainer.classList.add('animate-pulse-fast');
+
+                if (type === 'video') {
+                    const video = document.createElement('video');
+                    video.src = src;
+                    video.poster = poster;
+                    video.controls = true;
+                    video.autoplay = true;
+                    video.muted = true; // Required for autoplay in most browsers
+                    video.className = 'w-full h-full object-contain rounded-xl bg-zinc-100 dark:bg-zinc-950';
+                    mainMediaContainer.appendChild(video);
+                } else {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.className = 'w-full h-full object-contain rounded-xl bg-zinc-100 dark:bg-zinc-950';
+                    mainMediaContainer.appendChild(img);
+                }
+
+                setTimeout(() => mainMediaContainer.classList.remove('animate-pulse-fast'), 300);
+            };
+
+            // Main Open Function
+            window.openProjectDetails = (cardElement) => {
+                // 1. Extract Data from the hidden DOM inside the clicked card
+                const rawTitle = cardElement.querySelector('.proj-title')?.innerText || 'Project View';
+                const rawTime = cardElement.querySelector('.proj-time')?.innerText || '';
+                const rawCategory = cardElement.querySelector('.proj-category')?.innerText || 'Case Study';
+                const rawLink = cardElement.querySelector('.proj-link')?.href || null;
+                const richContent = cardElement.querySelector('.proj-rich-content')?.innerHTML || '';
+                const mediaNodes = cardElement.querySelectorAll('.proj-media-item');
+
+                // 2. Populate Text & Details
+                titleEl.textContent = rawTitle;
+                timeEl.textContent = rawTime;
+                categoryEl.textContent = rawCategory;
+                descEl.innerHTML = richContent;
+
+                if (rawLink) {
+                    linkEl.href = rawLink;
+                    linkEl.classList.remove('hidden');
+                    linkEl.classList.add('inline-flex');
+                } else {
+                    linkEl.classList.add('hidden');
+                    linkEl.classList.remove('inline-flex');
+                }
+
+                // 3. Build Media Gallery
+                thumbnailTrack.innerHTML = '';
+                if (mediaNodes.length > 0) {
+                    // Render first item immediately
+                    const firstType = mediaNodes[0].dataset.type;
+                    const firstSrc = mediaNodes[0].dataset.src;
+                    const firstPoster = mediaNodes[0].dataset.poster || '';
+                    renderMainMedia(firstType, firstSrc, firstPoster);
+
+                    // Generate Thumbnails
+                    mediaNodes.forEach((node, index) => {
+                        const type = node.dataset.type;
+                        const src = node.dataset.src;
+                        const thumbSrc = node.dataset.thumb || (type === 'video' ? node.dataset.poster : src);
+
+                        const thumbBtn = document.createElement('button');
+                        thumbBtn.className = `relative shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${index === 0 ? 'border-zinc-900 dark:border-white opacity-100' : 'border-transparent opacity-50 hover:opacity-100'}`;
+
+                        // Add play icon overlay if it's a video
+                        const videoOverlay = type === 'video' ? `<div class="absolute inset-0 flex items-center justify-center bg-black/40"><svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>` : '';
+
+                        thumbBtn.innerHTML = `
+                    <img src="${thumbSrc}" class="w-full h-full object-cover" alt="Thumbnail ${index + 1}" />
+                    ${videoOverlay}
+                `;
+
+                        thumbBtn.onclick = () => {
+                            // Update Active State
+                            Array.from(thumbnailTrack.children).forEach(btn => {
+                                btn.classList.remove('border-zinc-900', 'dark:border-white', 'opacity-100');
+                                btn.classList.add('border-transparent', 'opacity-50');
+                            });
+                            thumbBtn.classList.add('border-zinc-900', 'dark:border-white', 'opacity-100');
+                            thumbBtn.classList.remove('border-transparent', 'opacity-50');
+
+                            // Trigger Media Change
+                            renderMainMedia(type, src, node.dataset.poster);
+                        };
+                        thumbnailTrack.appendChild(thumbBtn);
+                    });
+                    thumbnailTrack.parentElement.classList.remove('hidden');
+                } else {
+                    thumbnailTrack.parentElement.classList.add('hidden');
+                }
+
+                // 4. Reveal Modal
+                modal.classList.replace('opacity-0', 'opacity-100');
+                modal.classList.replace('pointer-events-none', 'pointer-events-auto');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('overflow-hidden');
+            };
+
+            // Event Listeners
+            closeBtn?.addEventListener('click', hideProjectModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) hideProjectModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') hideProjectModal();
+            });
+        });
     </script>
 </body>
 
