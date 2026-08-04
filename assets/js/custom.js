@@ -26,15 +26,17 @@ Project: Resume Portfolio Framework
     },
 
     // Modern Monospaced Typist Simulation Logic
+    // The H1 above this element already carries the name as static text for crawlers.
+    // This only animates the role strapline, so no indexable content depends on JS.
     tyipng: function () {
       if (document.querySelector(".cv_profile_name")) {
         window.ityped.init(document.querySelector(".cv_profile_name"), {
           strings: [
-            "S. M. Mahfujur Rahman.",
-            "Full-Stack Web Dev!",
-            "Laravel Developer!",
-            "Freelancer!",
-            "MERN Developer!",
+            "Full Stack Software Engineer",
+            "Laravel Developer",
+            "Vue.js & React Developer",
+            "REST API Engineer",
+            "Docker & DevOps Practitioner",
           ],
           loop: true,
           typeSpeed: 100,
@@ -133,11 +135,11 @@ $(document).ready(function () {
     var sections = [
       "#home",
       "#about",
-      "#exprience",
+      "#experience",
       "#portfolio",
       "#strength",
       "#education",
-      "#contactMe",
+      "#contact",
     ];
 
     var activeSection = null;
