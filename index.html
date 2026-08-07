@@ -1516,285 +1516,306 @@
                                 </div>
 
                                 <!-- Rich Description HTML -->
-                         
-<div class="proj-rich-content space-y-8 text-slate-300">
 
-    <!-- Project Overview -->
-    <section class="space-y-3">
-        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
-            Project Overview
-        </h3>
+                                <div class="proj-rich-content space-y-8 text-slate-300">
 
-        <p class="leading-8">
-            This project is a scalable, enterprise-grade SaaS platform designed to simplify business
-            operations through a modern web application. It provides a seamless experience for teams by
-            centralizing project management, task tracking, collaboration, analytics, and workflow
-            automation within a single ecosystem. The architecture was built with scalability,
-            maintainability, and performance as primary objectives, allowing the application to support
-            thousands of concurrent users while remaining responsive and reliable.
-        </p>
-    </section>
+                                    <!-- Project Overview -->
+                                    <section class="space-y-3">
+                                        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
+                                            Project Overview
+                                        </h3>
 
-    <!-- Challenge -->
-    <section class="space-y-3 mt-3">
-        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
-            Engineering Challenge
-        </h3>
+                                        <p class="leading-8">
+                                            This project is a scalable, enterprise-grade SaaS platform designed to
+                                            simplify business
+                                            operations through a modern web application. It provides a seamless
+                                            experience for teams by
+                                            centralizing project management, task tracking, collaboration, analytics,
+                                            and workflow
+                                            automation within a single ecosystem. The architecture was built with
+                                            scalability,
+                                            maintainability, and performance as primary objectives, allowing the
+                                            application to support
+                                            thousands of concurrent users while remaining responsive and reliable.
+                                        </p>
+                                    </section>
 
-        <p class="leading-8">
-            One of the most demanding technical challenges was maintaining real-time synchronization across
-            multiple organizations while ensuring complete tenant isolation. Every organization maintained
-            its own dedicated database, requiring dynamic runtime connection switching without affecting
-            active users. Simultaneously, thousands of real-time events—including task updates,
-            notifications, comments, and workflow changes—needed to be processed with minimal latency
-            while preventing database bottlenecks and ensuring data consistency.
-        </p>
-    </section>
+                                    <!-- Challenge -->
+                                    <section class="space-y-3 mt-3">
+                                        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
+                                            Engineering Challenge
+                                        </h3>
 
-    <!-- Solution -->
-    <section class="space-y-3 mt-3">
-        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
-            Technical Solution
-        </h3>
+                                        <p class="leading-8">
+                                            One of the most demanding technical challenges was maintaining real-time
+                                            synchronization across
+                                            multiple organizations while ensuring complete tenant isolation. Every
+                                            organization maintained
+                                            its own dedicated database, requiring dynamic runtime connection switching
+                                            without affecting
+                                            active users. Simultaneously, thousands of real-time events—including task
+                                            updates,
+                                            notifications, comments, and workflow changes—needed to be processed with
+                                            minimal latency
+                                            while preventing database bottlenecks and ensuring data consistency.
+                                        </p>
+                                    </section>
 
-        <p class="leading-8">
-            The application was architected using Laravel with a database-per-tenant multitenancy
-            strategy, combined with asynchronous job queues, Redis caching, WebSocket broadcasting, and
-            optimized Eloquent queries. Heavy background operations were delegated to queue workers,
-            significantly reducing request latency while maintaining high throughput under concurrent
-            workloads. Careful indexing, eager loading, caching strategies, and event-driven architecture
-            helped deliver consistent performance as the system scaled.
-        </p>
-    </section>
+                                    <!-- Solution -->
+                                    <section class="space-y-3 mt-3">
+                                        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
+                                            Technical Solution
+                                        </h3>
 
-    <!-- Features -->
-    <section class="space-y-3 mt-3">
-        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
-            Key Features
-        </h3>
+                                        <p class="leading-8">
+                                            The application was architected using Laravel with a database-per-tenant
+                                            multitenancy
+                                            strategy, combined with asynchronous job queues, Redis caching, WebSocket
+                                            broadcasting, and
+                                            optimized Eloquent queries. Heavy background operations were delegated to
+                                            queue workers,
+                                            significantly reducing request latency while maintaining high throughput
+                                            under concurrent
+                                            workloads. Careful indexing, eager loading, caching strategies, and
+                                            event-driven architecture
+                                            helped deliver consistent performance as the system scaled.
+                                        </p>
+                                    </section>
 
-        <ul class="grid gap-4">
-            <li class="flex gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
-                <span>Real-time collaboration powered by WebSockets with instant task synchronization across connected clients.</span>
-            </li>
+                                    <!-- Features -->
+                                    <section class="space-y-3 mt-3">
+                                        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
+                                            Key Features
+                                        </h3>
 
-            <li class="flex gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
-                <span>Database-per-tenant multitenancy architecture with dynamic runtime database switching and complete tenant isolation.</span>
-            </li>
+                                        <ul class="grid gap-4">
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Real-time collaboration powered by WebSockets with instant task
+                                                    synchronization across connected clients.</span>
+                                            </li>
 
-            <li class="flex gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
-                <span>High-performance queue processing for notifications, background jobs, emails, and scheduled automation tasks.</span>
-            </li>
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Database-per-tenant multitenancy architecture with dynamic runtime
+                                                    database switching and complete tenant isolation.</span>
+                                            </li>
 
-            <li class="flex gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
-                <span>RESTful API architecture supporting web, mobile, and third-party integrations with secure authentication.</span>
-            </li>
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>High-performance queue processing for notifications, background
+                                                    jobs, emails, and scheduled automation tasks.</span>
+                                            </li>
 
-            <li class="flex gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
-                <span>Optimized database queries using eager loading, indexing, caching, and pagination to improve scalability.</span>
-            </li>
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>RESTful API architecture supporting web, mobile, and third-party
+                                                    integrations with secure authentication.</span>
+                                            </li>
 
-            <li class="flex gap-3">
-                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
-                <span>Responsive, modern user interface built with Vue.js and Tailwind CSS v4, providing a smooth experience across desktop and mobile devices.</span>
-            </li>
-        </ul>
-    </section>
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Optimized database queries using eager loading, indexing, caching,
+                                                    and pagination to improve scalability.</span>
+                                            </li>
 
-</div>
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Responsive, modern user interface built with Vue.js and Tailwind
+                                                    CSS v4, providing a smooth experience across desktop and mobile
+                                                    devices.</span>
+                                            </li>
+                                        </ul>
+                                    </section>
+
+                                </div>
 
                             </div>
                         </div>
 
-                        <!-- PROJECT Standard Card -->
+                        <!-- PROJECT 2: Standard Card -->
                         <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]"
                             onclick="openProjectDetails(this)">
 
-                            <img src="/assets/images/task-mangement/task-management.webp" width="1919" height="945"
-                                loading="lazy" decoding="async" alt="Portfolio Dashboard"
+                            <!-- Main Card Image -->
+                            <img src="/assets/images/yoola/yoola-01.webp" width="1916" height="944" loading="lazy"
+                                decoding="async" alt="Yoola On-Demand Delivery Platform"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <!-- Gradient Overlay -->
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent">
+                                class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/40 to-transparent">
                             </div>
 
+                            <!-- Card Front Text -->
                             <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
-                                <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Data
-                                    Viz</span>
-                                <h3 class="text-2xl font-semibold mb-2">Metrics Dashboard</h3>
+                                <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">On-Demand
+                                    Delivery</span>
+                                <h3 class="text-2xl font-semibold mb-2">Yoola Delivery Platform</h3>
                                 <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Laravel</span>
                                     <span
                                         class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Vue.js</span>
                                 </div>
                             </div>
 
-                            <!-- Hidden Data -->
+                            <!-- ============================================== -->
+                            <!-- HIDDEN DATA FOR MODAL (You edit this easily!)  -->
+                            <!-- ============================================== -->
                             <div class="hidden">
-                                <span class="proj-title">Metrics Dashboard</span>
-                                <span class="proj-time">1 month ago</span>
-                                <span class="proj-category">Data Visualization</span>
+                                <span class="proj-title">Yoola - On-Demand Delivery Platform</span>
+                                <span class="proj-time">Jul 2026</span>
+                                <span class="proj-category">On-Demand Delivery</span>
+                                <!-- Add <a class="proj-link" href="https://..."></a> here to show the "Launch Live Application" button -->
 
                                 <!-- Add as many media items as you want here -->
                                 <div class="proj-media">
-                                    <!-- Video item removed: assets/videos/demo.mp4 does not exist and 404s in the modal. -->
-                                    <!-- Image Example -->
+
+                                    <!-- Walkthrough Video -->
+                                    <span class="proj-media-item" data-type="video"
+                                        data-src="/assets/images/yoola/yoola.mp4"
+                                        data-poster="/assets/images/yoola/yoola-01.webp"
+                                        data-thumb="/assets/images/yoola/yoola-01.webp"></span>
+
+                                    <!-- Screenshot Gallery -->
                                     <span class="proj-media-item" data-type="image"
-                                        data-src="/assets/images/task-mangement/task-management.webp"
-                                        data-thumb="/assets/images/task-mangement/task-management.webp"></span>
+                                        data-src="/assets/images/yoola/yoola-01.webp"
+                                        data-thumb="/assets/images/yoola/yoola-01.webp"></span>
+                                    <span class="proj-media-item" data-type="image"
+                                        data-src="/assets/images/yoola/yoola-02.webp"
+                                        data-thumb="/assets/images/yoola/yoola-02.webp"></span>
+                                    <span class="proj-media-item" data-type="image"
+                                        data-src="/assets/images/yoola/yoola-03.webp"
+                                        data-thumb="/assets/images/yoola/yoola-03.webp"></span>
+                                    <span class="proj-media-item" data-type="image"
+                                        data-src="/assets/images/yoola/yoola-04.webp"
+                                        data-thumb="/assets/images/yoola/yoola-04.webp"></span>
+                                    <span class="proj-media-item" data-type="image"
+                                        data-src="/assets/images/yoola/yoola-05.webp"
+                                        data-thumb="/assets/images/yoola/yoola-05.webp"></span>
                                 </div>
 
-                                <div class="proj-rich-content">
-                                    <h3>Architectural Overview</h3>
-                                    <p>An interactive portfolio metrics dashboard showcasing modular project layouts and
-                                        state-driven search dynamic filtering matrices.</p>
-                                    <p>Built intentionally for cross-device consistency and flexible mobile interface
-                                        rendering maps.</p>
+                                <!-- Rich Description HTML -->
+
+                                <div class="proj-rich-content space-y-8 text-slate-300">
+
+                                    <!-- Project Overview -->
+                                    <section class="space-y-3">
+                                        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
+                                            Project Overview
+                                        </h3>
+
+                                        <p class="leading-8">
+                                            Yoola is a large-scale on-demand delivery platform that combines food
+                                            ordering,
+                                            express parcel delivery, and rider management into a unified ecosystem. The
+                                            platform enables customers to place orders, merchants to manage products and
+                                            deliveries, riders to fulfill requests efficiently, and administrators to
+                                            monitor
+                                            the entire operation through a centralized management dashboard. The system
+                                            was
+                                            designed with scalability, high availability, and real-time communication in
+                                            mind
+                                            to support a rapidly growing user base.
+                                        </p>
+                                    </section>
+
+                                    <!-- Challenge -->
+                                    <section class="space-y-3 mt-3">
+                                        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
+                                            Engineering Challenge
+                                        </h3>
+
+                                        <p class="leading-8">
+                                            Developing an on-demand delivery platform required coordinating multiple
+                                            actors,
+                                            including customers, merchants, riders, and administrators, while ensuring
+                                            data
+                                            consistency and fast response times. One of the primary challenges was
+                                            managing
+                                            real-time order status updates, rider assignment, delivery tracking, and
+                                            notification workflows without creating performance bottlenecks. The system
+                                            also
+                                            needed to handle concurrent order processing, secure payment workflows, and
+                                            reliable communication between multiple applications.
+                                        </p>
+                                    </section>
+
+                                    <!-- Solution -->
+                                    <section class="space-y-3 mt-3">
+                                        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
+                                            Technical Solution
+                                        </h3>
+
+                                        <p class="leading-8">
+                                            The platform was developed using Laravel with a modular architecture to
+                                            separate
+                                            business domains such as food delivery, express delivery, and rider
+                                            management.
+                                            RESTful APIs powered communication between web and mobile applications,
+                                            while
+                                            queue-based background processing handled notifications, email delivery, and
+                                            other
+                                            asynchronous operations. Database optimization, caching strategies, and
+                                            efficient
+                                            Eloquent relationships were implemented to ensure reliable performance under
+                                            concurrent workloads and provide a seamless user experience.
+                                        </p>
+                                    </section>
+
+                                    <!-- Features -->
+                                    <section class="space-y-3 mt-3">
+                                        <h3 class="text-xl font-semibold text-zinc-600 dark:text-zinc-400">
+                                            Key Features
+                                        </h3>
+
+                                        <ul class="grid gap-4">
+
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Multi-service platform supporting food ordering, express parcel
+                                                    delivery, and rider operations within a single ecosystem.</span>
+                                            </li>
+
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Role-based dashboards for customers, merchants, riders, and
+                                                    administrators with secure authentication and authorization.</span>
+                                            </li>
+
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Real-time order lifecycle management, including order placement,
+                                                    rider assignment, status updates, and delivery tracking.</span>
+                                            </li>
+
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>RESTful API architecture enabling seamless integration between
+                                                    web, mobile, and third-party services.</span>
+                                            </li>
+
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Optimized database queries, caching strategies, background job
+                                                    queues, and asynchronous notification processing for improved
+                                                    scalability.</span>
+                                            </li>
+
+                                            <li class="flex gap-3">
+                                                <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+                                                <span>Responsive administrative interface built with Vue.js, delivering
+                                                    an intuitive experience for managing merchants, orders, deliveries,
+                                                    and operational analytics.</span>
+                                            </li>
+
+                                        </ul>
+                                    </section>
+
                                 </div>
+
                             </div>
                         </div>
-
-                        <!-- PROJECT Standard Card -->
-                        <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]"
-                            onclick="openProjectDetails(this)">
-
-                            <img src="/assets/images/task-mangement/task-management.webp" width="1919" height="945"
-                                loading="lazy" decoding="async" alt="Portfolio Dashboard"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent">
-                            </div>
-
-                            <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
-                                <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Data
-                                    Viz</span>
-                                <h3 class="text-2xl font-semibold mb-2">Metrics Dashboard</h3>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Vue.js</span>
-                                </div>
-                            </div>
-
-                            <!-- Hidden Data -->
-                            <div class="hidden">
-                                <span class="proj-title">Metrics Dashboard</span>
-                                <span class="proj-time">1 month ago</span>
-                                <span class="proj-category">Data Visualization</span>
-
-                                <!-- Add as many media items as you want here -->
-                                <div class="proj-media">
-                                    <!-- Video item removed: assets/videos/demo.mp4 does not exist and 404s in the modal. -->
-                                    <!-- Image Example -->
-                                    <span class="proj-media-item" data-type="image"
-                                        data-src="/assets/images/task-mangement/task-management.webp"
-                                        data-thumb="/assets/images/task-mangement/task-management.webp"></span>
-                                </div>
-
-                                <div class="proj-rich-content">
-                                    <h3>Architectural Overview</h3>
-                                    <p>An interactive portfolio metrics dashboard showcasing modular project layouts and
-                                        state-driven search dynamic filtering matrices.</p>
-                                    <p>Built intentionally for cross-device consistency and flexible mobile interface
-                                        rendering maps.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PROJECT Standard Card -->
-                        <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]"
-                            onclick="openProjectDetails(this)">
-
-                            <img src="/assets/images/task-mangement/task-management.webp" width="1919" height="945"
-                                loading="lazy" decoding="async" alt="Portfolio Dashboard"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent">
-                            </div>
-
-                            <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
-                                <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Data
-                                    Viz</span>
-                                <h3 class="text-2xl font-semibold mb-2">Metrics Dashboard</h3>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Vue.js</span>
-                                </div>
-                            </div>
-
-                            <!-- Hidden Data -->
-                            <div class="hidden">
-                                <span class="proj-title">Metrics Dashboard</span>
-                                <span class="proj-time">1 month ago</span>
-                                <span class="proj-category">Data Visualization</span>
-
-                                <!-- Add as many media items as you want here -->
-                                <div class="proj-media">
-                                    <!-- Video item removed: assets/videos/demo.mp4 does not exist and 404s in the modal. -->
-                                    <!-- Image Example -->
-                                    <span class="proj-media-item" data-type="image"
-                                        data-src="/assets/images/task-mangement/task-management.webp"
-                                        data-thumb="/assets/images/task-mangement/task-management.webp"></span>
-                                </div>
-
-                                <div class="proj-rich-content">
-                                    <h3>Architectural Overview</h3>
-                                    <p>An interactive portfolio metrics dashboard showcasing modular project layouts and
-                                        state-driven search dynamic filtering matrices.</p>
-                                    <p>Built intentionally for cross-device consistency and flexible mobile interface
-                                        rendering maps.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PROJECT Standard Card -->
-                        <div class="group relative cursor-pointer overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]"
-                            onclick="openProjectDetails(this)">
-
-                            <img src="/assets/images/task-mangement/task-management.webp" width="1919" height="945"
-                                loading="lazy" decoding="async" alt="Portfolio Dashboard"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent">
-                            </div>
-
-                            <div class="relative p-8 text-white z-10 flex flex-col justify-end h-full">
-                                <span class="text-xs font-mono uppercase tracking-widest text-zinc-300 mb-2">Data
-                                    Viz</span>
-                                <h3 class="text-2xl font-semibold mb-2">Metrics Dashboard</h3>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-full">Vue.js</span>
-                                </div>
-                            </div>
-
-                            <!-- Hidden Data -->
-                            <div class="hidden">
-                                <span class="proj-title">Metrics Dashboard</span>
-                                <span class="proj-time">1 month ago</span>
-                                <span class="proj-category">Data Visualization</span>
-
-                                <!-- Add as many media items as you want here -->
-                                <div class="proj-media">
-                                    <!-- Video item removed: assets/videos/demo.mp4 does not exist and 404s in the modal. -->
-                                    <!-- Image Example -->
-                                    <span class="proj-media-item" data-type="image"
-                                        data-src="/assets/images/task-mangement/task-management.webp"
-                                        data-thumb="/assets/images/task-mangement/task-management.webp"></span>
-                                </div>
-
-                                <div class="proj-rich-content">
-                                    <h3>Architectural Overview</h3>
-                                    <p>An interactive portfolio metrics dashboard showcasing modular project layouts and
-                                        state-driven search dynamic filtering matrices.</p>
-                                    <p>Built intentionally for cross-device consistency and flexible mobile interface
-                                        rendering maps.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Add more project cards following the structure of PROJECT 2 above... -->
 
                     </div>
                 </div>
