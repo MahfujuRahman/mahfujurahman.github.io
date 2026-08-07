@@ -2365,7 +2365,9 @@
                             <div
                                 class="relative bg-white dark:bg-zinc-900/40 p-8 sm:p-12 rounded-3xl ring-1 ring-zinc-200 shadow-2xl shadow-zinc-200/40 dark:ring-zinc-800/80 dark:shadow-black/50 backdrop-blur-xl">
 
-                                <form id="contactForm" class="space-y-8">
+                                <!-- action/method are a no-JS fallback; the handler below calls preventDefault -->
+                                <form id="contactForm" class="space-y-8" method="POST"
+                                    action="https://formsubmit.co/mahfujur.dev@gmail.com">
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
                                         <!-- Name -->
@@ -2651,33 +2653,42 @@
         // --- 1. Form submit Engine Configuration ---
         const formElement = document.getElementById("contactForm");
         if (formElement) {
+            const submitBtn = document.getElementById("submitBtn");
+            // Swap only the label span so the arrow icon inside the button survives.
+            const submitLabel = submitBtn.querySelector("span");
+            const defaultLabel = submitLabel.textContent;
+
             formElement.addEventListener("submit", function (event) {
                 event.preventDefault();
-
-                let formData = new FormData(this);
-                let submitBtn = document.getElementById("submitBtn");
+                if (submitBtn.disabled) return;
 
                 submitBtn.disabled = true;
-                submitBtn.innerText = "Sending...";
+                submitLabel.textContent = "Sending...";
 
-                fetch("https://formsubmit.co/63faf3cb7c60f1458e23d1042eb27693", {
+                // The /ajax/ endpoint answers with JSON. The plain endpoint answers
+                // with an HTML page and a 200 even when the submission was rejected
+                // (e.g. the address has not been confirmed yet), so status alone
+                // cannot tell success from failure.
+                fetch("https://formsubmit.co/ajax/b8efb4a2294e08bdedb930639b79873d", {
                     method: "POST",
-                    body: formData,
+                    headers: { Accept: "application/json" },
+                    body: new FormData(this),
                 })
-                    .then((response) => {
-                        if (response.ok) {
+                    .then((response) => response.json().catch(() => ({})))
+                    .then((data) => {
+                        if (String(data.success) === "true") {
                             showToast("✅ Message Sent Successfully!", "success");
                             formElement.reset();
                         } else {
-                            showToast("❌ Error sending message. Please try again.", "error");
+                            showToast("❌ " + (data.message || "Error sending message. Please try again."), "error");
                         }
                     })
-                    .catch((error) => {
+                    .catch(() => {
                         showToast("❌ Something went wrong. Please check your network.", "error");
                     })
                     .finally(() => {
                         submitBtn.disabled = false;
-                        submitBtn.innerText = "Submit Application";
+                        submitLabel.textContent = defaultLabel;
                     });
             });
         }
