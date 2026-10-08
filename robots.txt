@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-# Block nothing — this is a single-page personal portfolio.
-# All assets (CSS/JS/images) must stay crawlable so Google can render the page.
-
-Sitemap: https://mahfujurahman.github.io/sitemap.xml
+Sitemap: https://mahfujur.dev/sitemap.xml
